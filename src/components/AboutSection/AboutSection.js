@@ -1,13 +1,25 @@
-import React from 'react';
-import './AboutSection.css';
-import aboutImage from '../../assets/about.jpg';
-import { FaAward, FaGithub, FaProjectDiagram } from 'react-icons/fa';
+import React from "react";
+import "./AboutSection.css";
+import aboutImage from "../../assets/about.jpg";
+import { FaAward, FaGithub, FaProjectDiagram } from "react-icons/fa";
 
 const AboutSection = () => {
   const stats = [
-    { icon: <FaAward className="stat-icon" />, value: '2+', label: 'Years Experience' },
-    { icon: <FaGithub className="stat-icon" />, value: '500+', label: 'Commits' },
-    { icon: <FaProjectDiagram className="stat-icon" />, value: '50+', label: 'Projects' }
+    {
+      icon: <FaAward className="stat-icon" />,
+      value: "2+",
+      label: "Years Experience",
+    },
+    {
+      icon: <FaGithub className="stat-icon" />,
+      value: "500+",
+      label: "Commits",
+    },
+    {
+      icon: <FaProjectDiagram className="stat-icon" />,
+      value: "50+",
+      label: "Projects",
+    },
   ];
 
   return (
@@ -32,13 +44,17 @@ const AboutSection = () => {
               ))}
             </div>
             <p className="about-description">
-              I'm a passionate Full Stack Developer with expertise in building web applications using modern technologies.
-              With a strong foundation in JavaScript and web development, I create efficient, scalable, and user-friendly
-              applications that deliver exceptional user experiences.
+              I'm a passionate Full Stack Developer with a strong emphasis on{" "}
+              <strong>frontend design</strong> and{" "}
+              <strong>user experience</strong>. Crafting visually appealing,
+              responsive, and interactive user interfaces is my top priority,
+              using modern technologies like React, HTML, CSS, and JavaScript.
             </p>
             <p className="about-description">
-              My approach combines technical excellence with creative problem-solving. I specialize in translating
-              business requirements into technical solutions while maintaining clean, maintainable code.
+              While I do have solid experience in{" "}
+              <strong>backend development</strong>—including RESTful APIs,
+              Node.js, Express, and MongoDB—my main focus remains on creating
+              engaging, user-centered frontend experiences.
             </p>
             <a href="#contact" className="btn btn-primary">
               Contact Me
@@ -46,7 +62,10 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-      <div className="glow-effect" style={{ top: '50%', right: '-100px' }}></div>
+      <div
+        className="glow-effect"
+        style={{ top: "50%", right: "-100px" }}
+      ></div>
     </section>
   );
 };
