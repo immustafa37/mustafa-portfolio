@@ -36,7 +36,6 @@ const ContactSection = () => {
     
     setIsSubmitting(true);
     
-    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -63,7 +62,7 @@ const ContactSection = () => {
                 <span>im262897tt@gmail.com</span>
               </div>
               <a
-                href="https://wa.me/923001234567"
+                href="https://wa.me/923496807311"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="detail-item"
@@ -72,13 +71,13 @@ const ContactSection = () => {
                 <span>Contact on WhatsApp</span>
               </a>
               <a
-                href="https://github.com/johndoe"
+                href="https://github.com/immustafa37"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="detail-item"
               >
                 <FaGithub className="detail-icon" />
-                <span>github.com/johndoe</span>
+                <span>GitHub</span>
               </a>
             </div>
           </div>
