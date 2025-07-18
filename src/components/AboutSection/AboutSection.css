@@ -30,24 +30,72 @@
   position: relative;
   z-index: 2;
 }
-
-.image-frame {
+.image-container::before {
+  content: '';
   position: absolute;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  border: 3px solid var(--primary);
-  border-radius: 25px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: radial-gradient(
+    circle at center,
+    var(--primary) 0%,
+    transparent 70%
+  );
+  opacity: 0;
   z-index: 1;
-  transition: all 0.3s ease;
+  transition: opacity 0.5s ease;
 }
 
-.image-container:hover .image-frame {
-  transform: translate(10px, -10px);
-  box-shadow: 10px -10px 0 var(--secondary);
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 30px;
+  background: conic-gradient(
+    from 0deg,
+    var(--primary),
+    var(--secondary),
+    var(--primary)
+  );
+  z-index: 0;
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 0.5s ease;
 }
 
+.image-container:hover::before {
+  opacity: 0.6;
+}
+
+.image-container:hover::after {
+  opacity: 0.8;
+  animation: rotateGlow 3s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-image {
+  /* Add these to your existing .profile-image styles */
+  box-shadow: 0 0 30px rgba(79, 70, 229, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-container:hover .profile-image {
+  transform: scale(1.03);
+  box-shadow: 0 0 50px rgba(79, 70, 229, 0.6);
+}
 .about-text {
   flex: 1;
 }
@@ -60,12 +108,12 @@
 }
 
 .stat-card {
-  background-color: var(--dark-light);
+  background-color: var(--primary),;
   border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid rgba(79, 70, 229, 0.1);
+  border: 5px solid rgba(79, 70, 229, 0.1);
 }
 
 .stat-card:hover {

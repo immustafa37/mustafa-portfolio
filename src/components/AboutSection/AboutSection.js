@@ -1,12 +1,12 @@
 import React from 'react';
 import './AboutSection.css';
 import aboutImage from '../../assets/about.jpg';
-import { FaAward, FaUsers, FaProjectDiagram } from 'react-icons/fa';
+import { FaAward, FaGithub, FaProjectDiagram } from 'react-icons/fa';
 
 const AboutSection = () => {
   const stats = [
-    { icon: <FaAward className="stat-icon" />, value: '3+', label: 'Years Experience' },
-    { icon: <FaUsers className="stat-icon" />, value: '30+', label: 'Clients' },
+    { icon: <FaAward className="stat-icon" />, value: '2+', label: 'Years Experience' },
+    { icon: <FaGithub className="stat-icon" />, value: '500+', label: 'Commits' },
     { icon: <FaProjectDiagram className="stat-icon" />, value: '50+', label: 'Projects' }
   ];
 
