@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ContactSection.css';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaWhatsapp, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -60,16 +60,26 @@ const ContactSection = () => {
             <div className="contact-details">
               <div className="detail-item">
                 <FaEnvelope className="detail-icon" />
-                <span>john.doe@example.com</span>
+                <span>im262897tt@gmail.com</span>
               </div>
-              <div className="detail-item">
-                <FaLinkedin className="detail-icon" />
-                <span>linkedin.com/in/johndoe</span>
-              </div>
-              <div className="detail-item">
+              <a
+                href="https://wa.me/923001234567"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="detail-item"
+              >
+                <FaWhatsapp className="detail-icon" />
+                <span>Contact on WhatsApp</span>
+              </a>
+              <a
+                href="https://github.com/johndoe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="detail-item"
+              >
                 <FaGithub className="detail-icon" />
                 <span>github.com/johndoe</span>
-              </div>
+              </a>
             </div>
           </div>
           
