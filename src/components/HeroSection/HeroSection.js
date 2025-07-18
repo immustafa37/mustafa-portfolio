@@ -1,23 +1,26 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import './HeroSection.css';
-import heroImage from '../../assets/hero.jpg';
+import React, { useState, useEffect, useMemo } from "react";
+import "./HeroSection.css";
+import heroImage from "../../assets/hero.jpg";
 
 const HeroSection = () => {
-  const [typedText, setTypedText] = useState('');
+  const [typedText, setTypedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  
-  const texts = useMemo(() => [
-    "Frontend Web Developer",
-    "UI Designer",
-    "React js Specialist",
-    "Digital Creator"
-  ], []);
+
+  const texts = useMemo(
+    () => [
+      "Frontend Web Developer",
+      "UI Designer",
+      "React js Specialist",
+      "Digital Creator",
+    ],
+    []
+  );
 
   useEffect(() => {
     const typingSpeed = isDeleting ? 50 : 150;
     const currentText = texts[currentIndex];
-    
+
     const timer = setTimeout(() => {
       if (isDeleting) {
         setTypedText(currentText.substring(0, typedText.length - 1));
@@ -27,7 +30,7 @@ const HeroSection = () => {
 
       if (!isDeleting && typedText === currentText) {
         setTimeout(() => setIsDeleting(true), 1000);
-      } else if (isDeleting && typedText === '') {
+      } else if (isDeleting && typedText === "") {
         setIsDeleting(false);
         setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
       }
@@ -37,10 +40,10 @@ const HeroSection = () => {
   }, [typedText, currentIndex, isDeleting, texts]);
 
   const handleDownloadCV = () => {
-    const cvUrl =  '/documents/Mustafa_CV.pdf';
-    const link = document.createElement('a');
+    const cvUrl = "/documents/Mustafa_CV.pdf";
+    const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = 'Mustafa_Frontend_Developer_CV.pdf';
+    link.download = "Mustafa_Frontend_Developer_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -63,10 +66,14 @@ const HeroSection = () => {
               user-centered design and clean, efficient code.
             </p>
             <div className="hero-buttons">
-              <a href="#contact" className="btn btn-primary" aria-label="Contact me">
+              <a
+                href="#contact"
+                className="btn btn-primary"
+                aria-label="Contact me"
+              >
                 Contact Me
               </a>
-              <button 
+              <button
                 className="btn btn-secondary"
                 onClick={handleDownloadCV}
                 aria-label="Download CV"
@@ -75,16 +82,22 @@ const HeroSection = () => {
               </button>
             </div>
           </div>
+          {/* In your HeroSection.js */}
           <div className="hero-image">
             <div className="image-wrapper">
-              <img src={heroImage} alt="Mustafa" className="profile-image" />
+              <div className="image-container">
+                <img src={heroImage} alt="Mustafa" className="profile-image" />
+              </div>
               <div className="image-glow"></div>
             </div>
           </div>
         </div>
       </div>
-      <div className="glow-effect" style={{ top: '20%', left: '-50px' }}></div>
-      <div className="glow-effect" style={{ bottom: '10%', right: '-50px' }}></div>
+      <div className="glow-effect" style={{ top: "20%", left: "-50px" }}></div>
+      <div
+        className="glow-effect"
+        style={{ bottom: "10%", right: "-50px" }}
+      ></div>
     </section>
   );
 };
