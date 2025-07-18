@@ -8,9 +8,9 @@ const HeroSection = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   const texts = useMemo(() => [
-    "Web Developer",
-    "UI/UX Designer",
-    "MERN Specialist",
+    "Frontend Web Developer",
+    "UI Designer",
+    "React js Specialist",
     "Digital Creator"
   ], []);
 
@@ -48,7 +48,7 @@ const HeroSection = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Hi, I'm <span className="text-gradient">John Doe</span>
+              Hi, I'm <span className="text-gradient">Mustafa</span>
             </h1>
             <h2 className="hero-subtitle">
               Professional <span className="typed-text">{typedText}</span>
