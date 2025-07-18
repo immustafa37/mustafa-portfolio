@@ -41,9 +41,8 @@ const Header = () => {
     <>
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header-brand">
-          <span>Code</span>
-          <span className="header-accent">x</span>
-          <span>Mustafa</span>
+          <span>PORT</span>
+          <span className="header-accent">FOLIO</span>
         </div>
 
         <nav className="desktop-nav">

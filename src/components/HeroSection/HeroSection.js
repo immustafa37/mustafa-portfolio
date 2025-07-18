@@ -37,9 +37,13 @@ const HeroSection = () => {
   }, [typedText, currentIndex, isDeleting, texts]);
 
   const handleDownloadCV = () => {
-    // Replace with actual CV download logic
-    console.log('Download CV clicked');
-    // Example: window.open('/path-to-cv.pdf', '_blank');
+    const cvUrl =  '/documents/Mustafa_CV.pdf';
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Mustafa_Frontend_Developer_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -73,7 +77,7 @@ const HeroSection = () => {
           </div>
           <div className="hero-image">
             <div className="image-wrapper">
-              <img src={heroImage} alt="John Doe" className="profile-image" />
+              <img src={heroImage} alt="Mustafa" className="profile-image" />
               <div className="image-glow"></div>
             </div>
           </div>
