@@ -11,7 +11,7 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      // Section detection
+      
       const sections = ['home', 'about', 'skills', 'projects', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -41,8 +41,9 @@ const Header = () => {
     <>
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header-brand">
-          <span>PORT</span>
-          <span className="header-accent">FOLIO</span>
+          <span>Code</span>
+          <span className="header-accent">x</span>
+          <span>Mustafa</span>
         </div>
 
         <nav className="desktop-nav">
