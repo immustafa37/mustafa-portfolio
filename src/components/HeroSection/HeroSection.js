@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './HeroSection.css';
 import heroImage from '../../assets/hero.jpg';
 
@@ -7,12 +7,13 @@ const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const texts = [
+  // Using useMemo to memoize the texts array
+  const texts = useMemo(() => [
     "Web Developer",
     "UI/UX Designer",
     "MERN Specialist",
     "Digital Creator"
-  ];
+  ], []);
 
   useEffect(() => {
     const typingSpeed = isDeleting ? 50 : 150;
@@ -34,7 +35,7 @@ const HeroSection = () => {
     }, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [typedText, currentIndex, isDeleting]);
+  }, [typedText, currentIndex, isDeleting, texts]); // Added texts to dependencies
 
   return (
     <section id="home" className="hero-section">
@@ -56,9 +57,9 @@ const HeroSection = () => {
               <a href="#contact" className="btn btn-primary">
                 Contact Me
               </a>
-              <a href="#" className="btn btn-secondary">
+              <button className="btn btn-secondary">
                 Download CV
-              </a>
+              </button>
             </div>
           </div>
           <div className="hero-image">
