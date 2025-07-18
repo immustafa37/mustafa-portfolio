@@ -127,7 +127,7 @@ const getProgressColor = (name) => {
     'React': 'linear-gradient(90deg, #61DAFB, #00D8FF)',
     'Node.js': 'linear-gradient(90deg, #339933, #68A063)',
     'HTML': 'linear-gradient(90deg, #E34F26, #F06529)',
-    'CSS': 'linear-gradient(90deg, #1572B6, #2965F1)',
+    'CSS': 'linear-gradient(90deg, #26638eff, #2763eeff)',
     'Express.js': 'linear-gradient(90deg, #ffffff, #c7c0c0)',
     'MongoDB': 'linear-gradient(90deg, #47A248, #589636)'
   };

@@ -64,10 +64,9 @@
 
 .skill-progress {
   height: 100%;
-  border-radius: 4px;
+  border-radius: 6px;
   position: relative;
   transition: width 1s ease;
-  box-shadow: 0 0 20px currentColor;
 }
 .skill-progress {
   transition: width 1.5s ease-out, box-shadow 1.5s ease;
@@ -85,7 +84,7 @@
 }
 
 .skill-card:hover .skill-percent {
-  text-shadow: 0 0 8px currentColor;
+  text-shadow: 0 0 4px currentColor;
 }
 .skill-progress::after {
   content: '';
