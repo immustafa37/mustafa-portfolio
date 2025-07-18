@@ -82,7 +82,6 @@ const HeroSection = () => {
               </button>
             </div>
           </div>
-          {/* In your HeroSection.js */}
           <div className="hero-image">
             <div className="image-wrapper">
               <div className="image-container">

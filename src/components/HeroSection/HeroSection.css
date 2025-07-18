@@ -11,7 +11,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 27%; /* 👈 Sirf yeh line add karo */
+  object-position: center 27%;
   border-radius: 50%;
   border: 8px solid var(--dark-light);
   position: relative;
