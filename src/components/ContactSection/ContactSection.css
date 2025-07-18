@@ -1,0 +1,119 @@
+.contact-section {
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info {
+  background-color: var(--dark-light);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.contact-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  color: var(--text);
+}
+
+.detail-icon {
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.contact-form {
+  background-color: var(--dark-light);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: rgba(79, 70, 229, 0.05);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+  border-radius: 6px;
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.error-message {
+  display: block;
+  margin-top: 0.5rem;
+  color: #ff4d4d;
+  font-size: 0.85rem;
+}
+
+.error {
+  border-color: #ff4d4d !important;
+}
+
+.btn.submitting {
+  background: linear-gradient(135deg, var(--dark-light), var(--dark-light));
+}
+
+.btn.submitted {
+  background: linear-gradient(135deg, #4BB543, #3a9e33);
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+}
