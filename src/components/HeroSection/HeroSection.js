@@ -7,7 +7,6 @@ const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  // Using useMemo to memoize the texts array
   const texts = useMemo(() => [
     "Web Developer",
     "UI/UX Designer",
@@ -35,7 +34,13 @@ const HeroSection = () => {
     }, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [typedText, currentIndex, isDeleting, texts]); // Added texts to dependencies
+  }, [typedText, currentIndex, isDeleting, texts]);
+
+  const handleDownloadCV = () => {
+    // Replace with actual CV download logic
+    console.log('Download CV clicked');
+    // Example: window.open('/path-to-cv.pdf', '_blank');
+  };
 
   return (
     <section id="home" className="hero-section">
@@ -54,10 +59,14 @@ const HeroSection = () => {
               user-centered design and clean, efficient code.
             </p>
             <div className="hero-buttons">
-              <a href="#contact" className="btn btn-primary">
+              <a href="#contact" className="btn btn-primary" aria-label="Contact me">
                 Contact Me
               </a>
-              <button className="btn btn-secondary">
+              <button 
+                className="btn btn-secondary"
+                onClick={handleDownloadCV}
+                aria-label="Download CV"
+              >
                 Download CV
               </button>
             </div>
