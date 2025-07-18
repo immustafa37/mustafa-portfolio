@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './SkillsSection.css';
-import { 
-  SiJavascript, 
-  SiReact, 
-  SiNodedotjs, 
+import {
+  SiJavascript,
+  SiReact,
+  SiNodedotjs,
   SiHtml5,
   SiCss3,
   SiExpress,
@@ -26,16 +26,18 @@ const SkillsSection = () => {
   const animationTimeoutRef = useRef(null);
 
   useEffect(() => {
+    const section = sectionRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setAnimate(false);
-            
+
             if (animationTimeoutRef.current) {
               clearTimeout(animationTimeoutRef.current);
             }
-            
+
             animationTimeoutRef.current = setTimeout(() => {
               setAnimate(true);
             }, 100);
@@ -47,13 +49,13 @@ const SkillsSection = () => {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (section) {
+      observer.observe(section);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (section) {
+        observer.unobserve(section);
       }
       if (animationTimeoutRef.current) {
         clearTimeout(animationTimeoutRef.current);
@@ -67,8 +69,8 @@ const SkillsSection = () => {
         <h2 className="section-title">My Skills</h2>
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`skill-card ${animate ? 'animate' : ''}`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
@@ -79,15 +81,15 @@ const SkillsSection = () => {
                 <h3>{skill.name}</h3>
               </div>
               <div className="skill-bar">
-                <div 
-                  className="skill-progress" 
-                  style={{ 
+                <div
+                  className="skill-progress"
+                  style={{
                     width: animate ? `${skill.level}%` : '0%',
                     background: getProgressColor(skill.name),
                     transitionDuration: animate ? '2s' : '0s'
                   }}
                 ></div>
-                <span 
+                <span
                   className="skill-percent"
                   style={{
                     opacity: animate ? 1 : 0,
@@ -107,7 +109,6 @@ const SkillsSection = () => {
   );
 };
 
-// Helper functions for colors (keep the same)
 const getIconColor = (name) => {
   const colors = {
     'JavaScript': '#F7DF1E',
@@ -120,7 +121,6 @@ const getIconColor = (name) => {
   };
   return colors[name] || '#4f46e5';
 };
-
 const getProgressColor = (name) => {
   const colors = {
     'JavaScript': 'linear-gradient(90deg, #F7DF1E, #F0DB4F)',
@@ -128,7 +128,7 @@ const getProgressColor = (name) => {
     'Node.js': 'linear-gradient(90deg, #339933, #68A063)',
     'HTML': 'linear-gradient(90deg, #E34F26, #F06529)',
     'CSS': 'linear-gradient(90deg, #1572B6, #2965F1)',
-    'Express.js': 'linear-gradient(90deg, #ffffffff, #c7c0c0ff)',
+    'Express.js': 'linear-gradient(90deg, #ffffff, #c7c0c0)',
     'MongoDB': 'linear-gradient(90deg, #47A248, #589636)'
   };
   return colors[name] || 'linear-gradient(90deg, #4f46e5, #7c3aed)';
