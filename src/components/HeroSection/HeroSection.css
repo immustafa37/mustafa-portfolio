@@ -9,14 +9,16 @@
 
 .profile-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  object-position: center 30%;
-  transform: translateY(10px);
+  object-position: center 27%; /* 👈 Sirf yeh line add karo */
   border-radius: 50%;
+  border: 8px solid var(--dark-light);
   position: relative;
   z-index: 2;
 }
+
+
 
 .hero-content {
   display: flex;
@@ -167,9 +169,12 @@
   }
 
   .image-wrapper {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
     position: relative;
-    overflow: hidden;
+    margin: 0 auto;
   }
+
 }
