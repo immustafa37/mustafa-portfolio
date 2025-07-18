@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +10,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <h3>Mustafa Ahsan Baksh</h3>
-            <p>Web Developer | Performance Optimizer | Vercel/Netlify Deployer</p>
+            <p>Frontend Engineer | UI/UX Explorer | Web Enthusiast</p>
           </div>
           <div className="footer-links">
             <div className="links-column">
@@ -27,9 +26,9 @@ const Footer = () => {
             <div className="links-column">
               <h4>Resources</h4>
               <ul>
-                <li><a href="https://www.youtube.com/watch?v=_cl4gIpfjq0&list=PL8p2I9GklV463WUKdVzUZ17IDZ3SwoSTu&pp=0gcJCV8EOCosWNin" target="_blank">Learn React js</a></li>
-                <li><a href="https://www.youtube.com/@shahidiqbaljhawari">Shahid Iqbal Youtube</a></li>
-                <li><a href="https://github.com/shahidjhawari">Shahid Iqbal GitHub</a></li>
+                <li><a href="https://www.youtube.com/watch?v=_cl4gIpfjq0&list=PL8p2I9GklV463WUKdVzUZ17IDZ3SwoSTu&pp=0gcJCV8EOCosWNin" target="_blank" rel="noreferrer">Learn React JS</a></li>
+                <li><a href="https://www.youtube.com/@shahidiqbaljhawari" target="_blank" rel="noreferrer">Shahid Iqbal YouTube</a></li>
+                <li><a href="https://github.com/shahidjhawari" target="_blank" rel="noreferrer">Shahid Iqbal GitHub</a></li>
               </ul>
             </div>
           </div>
