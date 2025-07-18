@@ -14,7 +14,7 @@ const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     image: glassmorphismUiShowcase,
     github: "https://github.com/immustafa37/Glassmorphism-UI-Showcase",
-    live: "https://yourdomain.com/glassmorphism-ui-showcase"
+    live: "https://glassmorphism-ui-showcase.netlify.app"
   },
   {
     title: "Digital Health Tracker",
@@ -22,7 +22,7 @@ const projects = [
     technologies: ["React", "CSS", "Chart.js"],
     image: digitalHealthTracker,
     github: "https://github.com/immustafa37/frontend-health-tracker",
-    live: "https://yourdomain.com/digital-health-tracker"
+    live: "https://digital-health-tracker.vercel.app"
   },
   {
     title: "4K Wallpapers Hub",
@@ -30,7 +30,7 @@ const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     image: wallpapers4k,
     github: "https://github.com/immustafa37/4k-Wallpapers",
-    live: "https://yourdomain.com/4k-wallpapers"
+    live: "https://4k-wallpapers37.netlify.app"
   },
   {
     title: "Niveus Chat Web",
@@ -38,7 +38,7 @@ const projects = [
     technologies: ["React", "Node.js", "Socket.io"],
     image: niveusChatWeb,
     github: "https://github.com/immustafa37/frontend-chat-web",
-    live: "https://yourdomain.com/niveus-chat-web"
+    live: "https://niveus-chat-web.vercel.app"
   },
   {
     title: "Quizify Code",
@@ -46,7 +46,7 @@ const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     image: quizifyCode,
     github: "https://github.com/immustafa37/Quiz-Web",
-    live: "https://yourdomain.com/quizify-code"
+    live: "https://quizify-code.netlify.app"
   }
 ];
 
