@@ -102,8 +102,8 @@
 }
 
 .project-technologies span {
-  background-color: rgba(79, 70, 229, 0.1);
-  color: var(--primary);
+  background-color: var(--primary);
+  color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
