@@ -10,19 +10,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h3>John Doe</h3>
-            <p>Full Stack Developer | MERN Specialist | Digital Creator</p>
-            <div className="footer-social">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaTwitter />
-              </a>
-            </div>
+            <h3>Mustafa Ahsan Baksh</h3>
+            <p>Web Developer | Performance Optimizer | Vercel/Netlify Deployer</p>
           </div>
           <div className="footer-links">
             <div className="links-column">
@@ -38,15 +27,15 @@ const Footer = () => {
             <div className="links-column">
               <h4>Resources</h4>
               <ul>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Tutorials</a></li>
-                <li><a href="#">GitHub</a></li>
+                <li><a href="https://www.youtube.com/watch?v=_cl4gIpfjq0&list=PL8p2I9GklV463WUKdVzUZ17IDZ3SwoSTu&pp=0gcJCV8EOCosWNin" target="_blank">Learn React js</a></li>
+                <li><a href="https://www.youtube.com/@shahidiqbaljhawari">Shahid Iqbal Youtube</a></li>
+                <li><a href="https://github.com/shahidjhawari">Shahid Iqbal GitHub</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© {currentYear} John Doe. All rights reserved.</p>
+          <p>© {currentYear} Mustafa Ahsan Baksh. All rights reserved.</p>
           <p>Built with React and ❤️</p>
         </div>
       </div>
