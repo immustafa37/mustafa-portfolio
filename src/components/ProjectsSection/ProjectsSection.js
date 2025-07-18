@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './ProjectsSection.css';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
-
 import glassmorphismUiShowcase from '../../assets/projects/glassmorphism-ui-showcase.png';
 import digitalHealthTracker from '../../assets/projects/digital-health-tracker.png';
 import wallpapers4k from '../../assets/projects/4k-wallpapers.png';
@@ -14,7 +13,7 @@ const projects = [
     description: "A beautiful UI library featuring modern glassmorphism-style components for quick design inspiration and copy-paste usage.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: glassmorphismUiShowcase,
-    github: "https://github.com/yourusername/glassmorphism-ui-showcase",
+    github: "https://github.com/immustafa37/Glassmorphism-UI-Showcase",
     live: "https://yourdomain.com/glassmorphism-ui-showcase"
   },
   {
@@ -22,7 +21,7 @@ const projects = [
     description: "A smart health tracking web app to monitor water, steps, meals, and exercise with a neat and interactive dashboard.",
     technologies: ["React", "CSS", "Chart.js"],
     image: digitalHealthTracker,
-    github: "https://github.com/yourusername/digital-health-tracker",
+    github: "https://github.com/immustafa37/frontend-health-tracker",
     live: "https://yourdomain.com/digital-health-tracker"
   },
   {
@@ -30,7 +29,7 @@ const projects = [
     description: "A collection of ultra HD wallpapers, with filter and download features, built for modern aesthetics.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: wallpapers4k,
-    github: "https://github.com/yourusername/4k-wallpapers",
+    github: "https://github.com/immustafa37/4k-Wallpapers",
     live: "https://yourdomain.com/4k-wallpapers"
   },
   {
@@ -38,7 +37,7 @@ const projects = [
     description: "Real-time chat app built with Socket.io and Express, featuring emojis, typing indicators, and dark/light mode.",
     technologies: ["React", "Node.js", "Socket.io"],
     image: niveusChatWeb,
-    github: "https://github.com/yourusername/niveus-chat-web",
+    github: "https://github.com/immustafa37/frontend-chat-web",
     live: "https://yourdomain.com/niveus-chat-web"
   },
   {
@@ -46,7 +45,7 @@ const projects = [
     description: "A quiz web app that tests JavaScript skills with a timer, scores, and explanations after each question.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: quizifyCode,
-    github: "https://github.com/yourusername/quizify-code",
+    github: "https://github.com/immustafa37/Quiz-Web",
     live: "https://yourdomain.com/quizify-code"
   }
 ];
