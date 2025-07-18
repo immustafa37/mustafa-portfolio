@@ -11,13 +11,13 @@ import {
 } from 'react-icons/si';
 
 const skills = [
-  { name: 'JavaScript', level: 90, icon: <SiJavascript /> },
-  { name: 'React', level: 85, icon: <SiReact /> },
-  { name: 'Node.js', level: 80, icon: <SiNodedotjs /> },
+  { name: 'JavaScript', level: 80, icon: <SiJavascript /> },
+  { name: 'React', level: 70, icon: <SiReact /> },
+  { name: 'Node.js', level: 45, icon: <SiNodedotjs /> },
   { name: 'HTML', level: 95, icon: <SiHtml5 /> },
-  { name: 'CSS', level: 75, icon: <SiCss3 /> },
-  { name: 'Express.js', level: 75, icon: <SiExpress className="express-icon" /> },
-  { name: 'MongoDB', level: 70, icon: <SiMongodb /> }
+  { name: 'CSS', level: 80, icon: <SiCss3 /> },
+  { name: 'Express.js', level: 30, icon: <SiExpress className="express-icon" /> },
+  { name: 'MongoDB', level: 50, icon: <SiMongodb /> }
 ];
 
 const SkillsSection = () => {
@@ -30,20 +30,16 @@ const SkillsSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Reset animation state
             setAnimate(false);
             
-            // Clear any existing timeout
             if (animationTimeoutRef.current) {
               clearTimeout(animationTimeoutRef.current);
             }
             
-            // Set timeout to trigger animation after a brief delay
             animationTimeoutRef.current = setTimeout(() => {
               setAnimate(true);
             }, 100);
           } else {
-            // When section leaves view, reset animation state
             setAnimate(false);
           }
         });
