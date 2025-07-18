@@ -9,10 +9,10 @@ const HeroSection = () => {
 
   const texts = useMemo(
     () => [
-      "Frontend Web Developer",
-      "UI Designer",
-      "React js Specialist",
-      "Digital Creator",
+      "React UI Builder",
+      "UI/UX Designer",
+      "JS & CSS Dev",
+      "Modern Web Dev",
     ],
     []
   );
