@@ -2,30 +2,52 @@ import React, { useState } from 'react';
 import './ProjectsSection.css';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
+import glassmorphismUiShowcase from '../../assets/projects/glassmorphism-ui-showcase.png';
+import digitalHealthTracker from '../../assets/projects/digital-health-tracker.png';
+import wallpapers4k from '../../assets/projects/4k-wallpapers.png';
+import niveusChatWeb from '../../assets/projects/niveus-chat-web.png';
+import quizifyCode from '../../assets/projects/quizify-code.png';
+
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-featured online store with payment integration, product management, and user authentication.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    github: "#",
-    live: "#"
+    title: "Glassmorphism UI Showcase",
+    description: "A beautiful UI library featuring modern glassmorphism-style components for quick design inspiration and copy-paste usage.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: glassmorphismUiShowcase,
+    github: "https://github.com/yourusername/glassmorphism-ui-showcase",
+    live: "https://yourdomain.com/glassmorphism-ui-showcase"
   },
   {
-    title: "Task Management App",
-    description: "Productivity application with drag-and-drop interface, real-time updates, and team collaboration.",
-    technologies: ["React", "Firebase", "Material UI"],
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    github: "#",
-    live: "#"
+    title: "Digital Health Tracker",
+    description: "A smart health tracking web app to monitor water, steps, meals, and exercise with a neat and interactive dashboard.",
+    technologies: ["React", "CSS", "Chart.js"],
+    image: digitalHealthTracker,
+    github: "https://github.com/yourusername/digital-health-tracker",
+    live: "https://yourdomain.com/digital-health-tracker"
   },
   {
-    title: "Portfolio Website",
-    description: "Professional portfolio showcasing my work with smooth animations and responsive design.",
-    technologies: ["React", "CSS3", "Framer Motion"],
-    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    github: "#",
-    live: "#"
+    title: "4K Wallpapers Hub",
+    description: "A collection of ultra HD wallpapers, with filter and download features, built for modern aesthetics.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: wallpapers4k,
+    github: "https://github.com/yourusername/4k-wallpapers",
+    live: "https://yourdomain.com/4k-wallpapers"
+  },
+  {
+    title: "Niveus Chat Web",
+    description: "Real-time chat app built with Socket.io and Express, featuring emojis, typing indicators, and dark/light mode.",
+    technologies: ["React", "Node.js", "Socket.io"],
+    image: niveusChatWeb,
+    github: "https://github.com/yourusername/niveus-chat-web",
+    live: "https://yourdomain.com/niveus-chat-web"
+  },
+  {
+    title: "Quizify Code",
+    description: "A quiz web app that tests JavaScript skills with a timer, scores, and explanations after each question.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: quizifyCode,
+    github: "https://github.com/yourusername/quizify-code",
+    live: "https://yourdomain.com/quizify-code"
   }
 ];
 
@@ -63,7 +85,7 @@ const ProjectsSection = () => {
           ))}
         </div>
         {visibleProjects < projects.length && (
-          <button 
+          <button
             className="btn btn-secondary load-more"
             onClick={() => setVisibleProjects(prev => prev + 3)}
           >
