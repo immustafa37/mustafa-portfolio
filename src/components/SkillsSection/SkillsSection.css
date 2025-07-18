@@ -66,11 +66,28 @@
 .skill-progress {
   height: 100%;
   border-radius: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
   position: relative;
   transition: width 1s ease;
+  box-shadow: 0 0 20px currentColor;
+}
+.skill-progress {
+  transition: width 2s ease-out, box-shadow 2s ease;
 }
 
+.skill-percent {
+  transition: opacity 2s ease, transform 2s ease, text-shadow 2s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.skill-card.animate .skill-percent {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card:hover .skill-percent {
+  text-shadow: 0 0 8px currentColor;
+}
 .skill-progress::after {
   content: '';
   position: absolute;
@@ -87,8 +104,10 @@
   position: absolute;
   right: 0;
   top: -25px;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-shadow: 0 0 1px currentColor;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {

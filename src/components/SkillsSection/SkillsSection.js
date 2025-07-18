@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './SkillsSection.css';
 import { 
   SiJavascript, 
@@ -16,19 +16,57 @@ const skills = [
   { name: 'Node.js', level: 80, icon: <SiNodedotjs /> },
   { name: 'HTML', level: 95, icon: <SiHtml5 /> },
   { name: 'CSS', level: 75, icon: <SiCss3 /> },
-  { name: 'Express.js', level: 75, icon: <SiExpress className="express-icon" /> }, // Added class
+  { name: 'Express.js', level: 75, icon: <SiExpress className="express-icon" /> },
   { name: 'MongoDB', level: 70, icon: <SiMongodb /> }
 ];
 
 const SkillsSection = () => {
   const [animate, setAnimate] = useState(false);
+  const sectionRef = useRef(null);
+  const animationTimeoutRef = useRef(null);
 
   useEffect(() => {
-    setAnimate(true);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Reset animation state
+            setAnimate(false);
+            
+            // Clear any existing timeout
+            if (animationTimeoutRef.current) {
+              clearTimeout(animationTimeoutRef.current);
+            }
+            
+            // Set timeout to trigger animation after a brief delay
+            animationTimeoutRef.current = setTimeout(() => {
+              setAnimate(true);
+            }, 100);
+          } else {
+            // When section leaves view, reset animation state
+            setAnimate(false);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+      if (animationTimeoutRef.current) {
+        clearTimeout(animationTimeoutRef.current);
+      }
+    };
   }, []);
 
   return (
-    <section id="skills" className="skills-section">
+    <section id="skills" className="skills-section" ref={sectionRef}>
       <div className="container">
         <h2 className="section-title">My Skills</h2>
         <div className="skills-grid">
@@ -48,11 +86,21 @@ const SkillsSection = () => {
                 <div 
                   className="skill-progress" 
                   style={{ 
-                    width: `${animate ? skill.level : 0}%`,
-                    background: getProgressColor(skill.name)
+                    width: animate ? `${skill.level}%` : '0%',
+                    background: getProgressColor(skill.name),
+                    transitionDuration: animate ? '2s' : '0s'
                   }}
                 ></div>
-                <span className="skill-percent">{skill.level}%</span>
+                <span 
+                  className="skill-percent"
+                  style={{
+                    opacity: animate ? 1 : 0,
+                    transform: animate ? 'translateY(0)' : 'translateY(10px)',
+                    transitionDuration: animate ? '2s' : '0s'
+                  }}
+                >
+                  {skill.level}%
+                </span>
               </div>
             </div>
           ))}
@@ -63,7 +111,7 @@ const SkillsSection = () => {
   );
 };
 
-// Helper functions for colors
+// Helper functions for colors (keep the same)
 const getIconColor = (name) => {
   const colors = {
     'JavaScript': '#F7DF1E',
@@ -71,7 +119,7 @@ const getIconColor = (name) => {
     'Node.js': '#339933',
     'HTML': '#E34F26',
     'CSS': '#1572B6',
-    'Express.js': '#ffffff', // Changed to white
+    'Express.js': '#ffffff',
     'MongoDB': '#47A248'
   };
   return colors[name] || '#4f46e5';
