@@ -29,12 +29,7 @@ const AboutSection = () => {
         <div className="about-content">
           <div className="about-image">
             <div className="image-container">
-              <img
-                src={aboutImage}
-                alt="About Me"
-                className="profile-image"
-                style={{ objectPosition: "top center" }}
-              />
+              <img src={aboutImage} alt="About Me" className="profile-image" />
               <div className="image-frame"></div>
             </div>
           </div>

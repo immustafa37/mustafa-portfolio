@@ -85,12 +85,7 @@ const HeroSection = () => {
           <div className="hero-image">
             <div className="image-wrapper">
               <div className="image-container">
-                <img
-                  src={heroImage}
-                  alt="Mustafa"
-                  className="profile-image"
-                  style={{ objectPosition: "top center" }}
-                />
+                <img src={heroImage} alt="Mustafa" className="profile-image" />
               </div>
               <div className="image-glow"></div>
             </div>
