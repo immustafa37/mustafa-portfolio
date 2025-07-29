@@ -29,15 +29,16 @@ const AboutSection = () => {
         <div className="about-content">
           <div className="about-image">
             <div className="image-container">
-              <img 
-                src={aboutImage} 
-                alt="About Me" 
+              <img
+                src={aboutImage}
+                alt="About Me"
                 className="profile-image"
-                style={{ 
-                  objectPosition: "center 30%", // Adjusted to show more of the head
-                  transform: "translateY(10px)" // Moves the image down slightly
+                style={{
+                  objectPosition: "center 40%", // ← Move head more into view
+                  transform: "translateY(5px)", // ← Subtle adjustment instead of 10px
                 }}
               />
+
               <div className="image-frame"></div>
             </div>
           </div>
