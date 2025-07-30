@@ -66,36 +66,22 @@ const HeroSection = () => {
               user-centered design and clean, efficient code.
             </p>
             <div className="hero-buttons">
-              <a
-                href="#contact"
-                className="btn btn-primary"
-                aria-label="Contact me"
-              >
+              <a href="#contact" className="btn btn-primary" aria-label="Contact me">
                 Contact Me
               </a>
-              <button
-                className="btn btn-secondary"
-                onClick={handleDownloadCV}
-                aria-label="Download CV"
-              >
+              <button className="btn btn-secondary" onClick={handleDownloadCV} aria-label="Download CV">
                 Download CV
               </button>
             </div>
           </div>
           <div className="hero-image">
             <div className="image-wrapper">
-              <img src={heroImage} alt="Mustafa" className="profile-image" />
               <div className="image-glow"></div>
-              <div className="image-border"></div>
+              <img src={heroImage} alt="Mustafa" className="profile-image" />
             </div>
           </div>
         </div>
       </div>
-      <div className="glow-effect" style={{ top: "20%", left: "-50px" }}></div>
-      <div
-        className="glow-effect"
-        style={{ bottom: "10%", right: "-50px" }}
-      ></div>
     </section>
   );
 };

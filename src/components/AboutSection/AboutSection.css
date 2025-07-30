@@ -56,17 +56,6 @@
   left: -15px;
   right: -15px;
   bottom: -15px;
-  border-radius: 30px;
-  background: conic-gradient(
-    from 0deg,
-    transparent,
-    transparent,
-    var(--primary),
-    transparent,
-    transparent,
-    var(--secondary),
-    transparent
-  );
   z-index: 1;
   animation: rotate 4s linear infinite;
   filter: blur(15px);
