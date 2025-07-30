@@ -68,7 +68,7 @@
 }
 
 .profile-image:hover {
-  transform: scale(1.03);
+  cursor: pointer;
   box-shadow: 0 0 50px rgba(79, 70, 229, 0.5);
 }
 
